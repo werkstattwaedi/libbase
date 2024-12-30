@@ -4,4 +4,5 @@
 enum class Status {
   kOk = 0,
   kError = 1,
+  kTimeout = 2,
 };
