@@ -56,12 +56,12 @@
 
 #if !defined(TL_ASSERT)
 //can't have assert in constexpr in C++11 and GCC 4.9 has a compiler bug
-#if (TL_CPLUSPLUS > 201103L) && !defined(TL_EXPECTED_GCC49)
-#include <cassert>
-#define TL_ASSERT(x) assert(x)
-#else 
+// #if (TL_CPLUSPLUS > 201103L) && !defined(TL_EXPECTED_GCC49)
+// #include <cassert>
+// #define TL_ASSERT(x) assert(x)
+// #else 
 #define TL_ASSERT(x)
-#endif
+// #endif
 #endif
 
 #if (defined(__GNUC__) && __GNUC__ == 4 && __GNUC_MINOR__ <= 9 &&              \
